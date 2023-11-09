@@ -40,7 +40,7 @@ export const regexes = {
 	list: {
 		title: 'Confluence Style',
 		// change to find completed todo
-		regex: /^\s*- \[[ |x]\]\s.*(?<=\s)(?:(@[^\s]+)|(\/\/[^\s]+)|(\+[^\s]+))(?:[^\n]*)?$/gm,
+		regex: /^\s*- \[[ |x]\]\s.*(?<=\s)(?:(@[^\s]+)|(\/\/[^\s]+)|(\#[^\s]+))(?:[^\n]*)?$/gm,
 		query: '/"- [ ]"',
 		assignee: (todo: string[]) => {
 			const result = todo[0].match(/(?<=\s@)([^\s]+)/);
@@ -52,13 +52,13 @@ export const regexes = {
 		},
 		tags: (todo: string[]) => {
 			// the /g is important to get multiple results instead of a single match
-			const result = todo[0].match(/(?<=\s\+)[^\s]+/g);
+			const result = todo[0].match(/(?<=\s\#)[^\s]+/g);
 			return result ? result : [];
 		},
 		msg: (todo: string[]) => {
 			let result = todo[0].split(/\s@[^\s]+/).join('');
 			result = result.split(/\s\/\/[^\s]+/).join('');
-			result = result.split(/\s\+[^\s]+/).join('');
+			result = result.split(/\s\#[^\s]+/).join('');
 			result = result.split(/- \[[ |x]\]/).join('');
 			return result.trim();
 		},
