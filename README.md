@@ -25,17 +25,17 @@ The basic function of this plugin is to have a single note where you can view al
 ### Confluence Style
 Inspired by [this post](https://discourse.joplinapp.org/t/create-a-task-report-plugin-for-a-joplin-note-taking-app/21177) on the Joplin forum. This is the preferred style because it uses the markdown checkbox format (making it trivial to check the box and hide the TODO from the summary). 
 
-The basic form is a checkbox, followed any (or all) of: @assignee (this is a primary filtering field, so there can only be one), //date, +tags, and finally the TODO content.
+The basic form is a checkbox, followed any (or all) of: @assignee (this is a primary filtering field, so there can only be one), //date, #tags, and finally the TODO content.
 
 ```
 I take a lot of notes about various things. It can be helpful to
 keep my TODOs together with the content they pertain to.
 
-- [ ] @TODO Think about how to make a plugin to solve this +joplin
+- [ ] @TODO Think about how to make a plugin to solve this #joplin
 
 This way the TODO benefits from context.
 
-- [ ] @TODO +joplin //2022-04-04 Release the TODO plugin!
+- [ ] @TODO #joplin //2022-04-04 Release the TODO plugin!
 
 I'd still like a way to view all these! See below.
 ```
@@ -91,11 +91,11 @@ This style is meant for personal use, the table method (below) is recommended fo
 # DUE
 - [Note a](:/e710b7af31fc47c89ca5fc4d3c0ecb3a): 2022-01-13 Have some me time
 
-- [Note b](:/beef7ed6d91649149751cea8d14af02d): 2022-03-12 Meat delivery +burgers
+- [Note b](:/beef7ed6d91649149751cea8d14af02d): 2022-03-12 Meat delivery #burgers
 
 # Bob
 ## Folder 2
-- [Note c](:/ef3aac56ffa246baa6a96cc94dd8f25e): Call Teddy +repairs
+- [Note c](:/ef3aac56ffa246baa6a96cc94dd8f25e): Call Teddy #repairs
 
 # Linda
 ## Folder 1
